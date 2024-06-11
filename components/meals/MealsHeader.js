@@ -3,14 +3,14 @@ import Link from "next/link";
 const MealsHeader = () => {
   return (
     <header className="flex flex-col gap-[2.5rem] mt-[3rem] mb-[5rem] mx-auto w-[90%] max-w-[75rem] text-[#ddd6cb] text-[1.5rem]">
-      <h1 className="font-display font-bold text-[3.4rem]">
+      <h1 className="font-display font-bold text-[2.5rem] sm:text-[3.4rem]">
         Delicious meals, created{" "}
         <span className="bg-gradient-to-r from-[#f9572a] to-[#ff8a05] bg-clip-text text-transparent">
           by you
         </span>
       </h1>
       <div>
-        <p className="m-0">
+        <p className="m-0 text-[18px] sm:text-[24px]">
           Choose your favorite recipe and cook it yourself. It is easy ad fun!
         </p>
         <p>

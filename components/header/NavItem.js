@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const NavItem = ({ title, path }) => {
+const NavItem = ({ title, path, onClose }) => {
   const pathName = usePathname();
 
   return (
-    <li>
+    <li onClick={() => onClose(false)}>
       <Link
         className={`${pathName === path ? "active" : undefined}`}
         href={path}

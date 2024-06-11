@@ -5,12 +5,12 @@ const LINKS = [
   { key: 2, title: "Foodies Community", path: "/community" },
 ];
 
-const NavLinks = () => {
+const NavLinks = ({ onClose, ...rest }) => {
   return (
-    <nav className="nav">
-      <ul className="list-none m-0 p-0 flex gap-[1.5rem] text-[1.25rem]">
+    <nav {...rest}>
+      <ul className="list-none m-0 p-0 flex max-sm:flex-col gap-[1.5rem] text-[1.25rem]">
         {LINKS.map((link) => (
-          <NavItem key={link.key} {...link} />
+          <NavItem key={link.key} {...link} onClose={onClose} />
         ))}
       </ul>
     </nav>

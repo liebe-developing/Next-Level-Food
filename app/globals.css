@@ -49,9 +49,13 @@ svg {
   color: #ddd8d8;
 }
 
+.text-shadow {
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
 @layer components {
   .cta-links {
-    @apply inline-block mt-[1rem] py-[0.5rem] px-[1rem] rounded-[0.5rem]  text-white font-bold no-underline;
+    @apply max-sm:text-nowrap max-sm:text-xl inline-block mt-[1rem] py-[0.5rem] px-[1rem] rounded-[0.5rem] text-white font-bold no-underline;
   }
   .slideshow {
     position: relative;
@@ -102,5 +106,18 @@ svg {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .share-form-input {
+    @apply block w-full py-[0.5rem] px-[1rem] rounded-[4px] border border-[#454952] bg-[#1c2027] text-[1.25rem] font-display text-[#ddd6cb] focus:outline-[#f99f2a] focus:bg-[#1f252d];
+  }
+
+  .share-form-label {
+    @apply block mb-[0.5rem] text-[1rem] font-display uppercase text-[#b3aea5] font-bold;
+  }
+
+  .share-form-action {
+    @apply border-0 py-[0.75rem] px-[2rem] bg-gradient-to-r from-[#f9572a] to-[#ff9b05] border-none text-white rounded-sm cursor-pointer text-[1.25rem] shadow-shareFormShadow hover:bg-gradient-to-r hover:from-[#fd4715] hover:to-[#f9b241] focus:bg-gradient-to-r focus:from-[#fd4715] focus:to-[#f9b241]
+    disabled:bg-[#ccc] disabled:text-[#979797] disabled:cursor-not-allowed hover:disabled:bg-[#ccc] hover:disabled:text-[#979797] hover:disabled:cursor-not-allowed focus:disabled:bg-[#ccc] focus:disabled:text-[#979797] focus:disabled:cursor-not-allowed;
   }
 }

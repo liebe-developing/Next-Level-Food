@@ -22,11 +22,11 @@ const CommunityPage = () => {
           "flex flex-col gap-[1rem] mt-[5rem] mx-auto mb-[5rem] max-w-[75rem] text-[#ddd6cb] text-[1.5rem] text-center"
         }
       >
-        <h1 className="font-display font-bold text-[3.4rem]">
+        <h1 className="font-display font-bold text-[2rem] sm:text-[3.4rem]">
           One shared passion:{" "}
           <span
             className={
-              "bg-gradient-to-r from-[#f9572a] to-[#ff8a05] bg-clip-text text-transparent"
+              "bg-gradient-to-r from-[#f9572a] to-[#ff8a05] bg-clip-text text-transparent  text-[2.5rem] sm:text-[3.4rem]"
             }
           >
             Food
@@ -40,21 +40,21 @@ const CommunityPage = () => {
         </h2>
 
         <ul className={"list-none my-[3rem] mx-0 p-0 "}>
-            {PerkLinks.map((link) => (
-              <li
-                key={link.title}
-                className="flex flex-col border border-gray-800 shadow-lg mb-4 p-4 rounded-lg items-center gap-[2rem]"
-              >
-                <Image
-                  src={link.img}
-                  alt={link.alt}
-                  className="w-[8rem] h-[8rem] object-contain"
-                />
-                <p className="font-display text-[1.5rem] font-bold m-0 text-[#ddd6cb]">
-                  {link.title}
-                </p>
-              </li>
-            ))}
+          {PerkLinks.map((link) => (
+            <li
+              key={link.title}
+              className="flex flex-col border border-gray-800 shadow-lg mb-4 p-4 rounded-lg items-center gap-[2rem]"
+            >
+              <Image
+                src={link.img}
+                alt={link.alt}
+                className="w-[8rem] h-[8rem] object-contain"
+              />
+              <p className="font-display text-[1.5rem] font-bold m-0 text-[#ddd6cb]">
+                {link.title}
+              </p>
+            </li>
+          ))}
         </ul>
       </main>
     </>
